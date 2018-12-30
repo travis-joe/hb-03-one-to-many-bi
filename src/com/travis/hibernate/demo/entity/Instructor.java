@@ -29,7 +29,7 @@ public class Instructor {
     @OneToMany(
             cascade = {CascadeType.MERGE, CascadeType.DETACH, CascadeType.PERSIST, CascadeType.REFRESH},
             mappedBy = "instructor",
-            fetch = FetchType.EAGER
+            fetch = FetchType.LAZY
     )
     private List<Course> courses;
 

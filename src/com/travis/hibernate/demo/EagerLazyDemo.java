@@ -19,6 +19,7 @@ public class EagerLazyDemo {
         try (Session session = factory.getCurrentSession(); factory) {
             session.beginTransaction();
             Instructor instructor = session.get(Instructor.class, 5);
+            System.out.println(instructor);
             System.out.println(instructor.getCourses());
             session.getTransaction().commit();
         }
